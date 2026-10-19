@@ -40,7 +40,7 @@ class Agent(private val ctx: Context, private val io: AgentIO) {
                 io.speak("The accessibility service is off. Please enable Jarvis in Accessibility settings.")
                 return@withContext
             }
-            delay(900) // let the UI settle
+            delay(300) // let the UI settle
             val snap = svc.snapshot()
             var shot: String? = null
             if (wantShot || snap.interactive < 3) shot = svc.screenshot()
